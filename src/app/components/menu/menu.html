@@ -1,0 +1,15 @@
+<nav class="menu-container">
+  <div class="logo">
+    <h1>Registro-app</h1>
+  </div>
+  <ul class="menu-items">
+    @for (item of menuItems; track item.label) {
+      <li>
+        <a [routerLink]="item.route" routerLinkActive="active">
+          <span class="material-icons">{{ item.icon }}</span>
+          <span>{{ item.label }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>
